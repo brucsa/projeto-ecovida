@@ -14,8 +14,11 @@
 
 body {
     font-family: var(--texto);
-    margin: 20px;
     background-color: var(--cor60);
+}
+
+main, header {
+padding: 20px;
 }
 
 #logo {
@@ -119,6 +122,7 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
 }
 
 footer h4 {
@@ -132,7 +136,7 @@ footer p {
     color: var(--cor60);
     text-decoration: none;
     text-align: center;
-    margin: 8px;
+    margin-bottom: 8px;
 
 }
 
