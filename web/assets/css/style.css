@@ -17,8 +17,9 @@ body {
     background-color: var(--cor60);
 }
 
-main, header {
-padding: 20px;
+main,
+header {
+    padding: 20px;
 }
 
 #logo {
@@ -52,23 +53,26 @@ p {
     font-size: 1rem;
 }
 
+a {
+    cursor: pointer;
+}
+
 /* BOTÃO */
-button {
+.botao {
+    display: inline-block;
     background-color: var(--cor30);
+    color: #14532D;
     border: none;
     padding: 16px;
     margin-top: 16px;
     border-radius: 16px;
-    color: var(--cor60);
-}
-
-button:hover {
-    background-color: var(--cor60);
-    border: 2px solid var(--cor10);
-}
-
-button a {
+    cursor: pointer;
     text-decoration: none;
+}
+
+.botao:hover {
+    background-color: var(--cor10);
+    color: var(--cor60);
 }
 
 /* BANNER */
@@ -108,9 +112,13 @@ button a {
 
 }
 
+.card-explore {
+margin: 16px;
+}
+
 .card-explore img {
     width: 100px;
-    margin: 8px 32px;
+    margin: 8px 8px;
 }
 
 /* RODAPÉ */
@@ -154,10 +162,10 @@ footer a>img {
     flex-direction: column;
 }
 
-.link-rodape {
+#link-rodape {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-
+    width: 100%;
 }
