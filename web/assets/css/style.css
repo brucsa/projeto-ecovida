@@ -2,6 +2,7 @@
     --cor60: #F0EDDE;
     --cor30: #C4ED4C;
     --cor10: #14532D;
+    --corTexto: #727272;
     --titulo: "Poppins", sans-serif;
     --texto: "Open Sans", sans-serif;
 }
@@ -17,13 +18,8 @@ body {
     background-color: var(--cor60);
 }
 
-main,
-header {
+main {
     padding: 20px;
-}
-
-#logo {
-    width: 90px;
 }
 
 /* TEXTO */
@@ -40,35 +36,65 @@ h1 {
     text-align: center;
 }
 
-h2,
+h2 {
+    font-size: 1.5rem;
+}
+
 h3 {
-    font-family: 1.5rem;
+    font-size: 1rem;
 }
 
 h4 {
-    font-family: 0.9rem
+    font-size: 0.9rem
 }
 
 p {
     font-size: 1rem;
+    color: var(--corTexto);
+    margin: 4px 0 4px 0;
 }
 
 a {
     cursor: pointer;
 }
 
+.titulo {
+    text-align: center;
+}
+
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     padding: 16px;
+    position: relative;
+    background-color: var(--cor60);
+}
+
+.logo-container {
+    z-index: 1000;
+}
+
+#logo {
+    max-height: 80px;
+}
+
+/* MENU HAMBURGUER */
+.menu-container {
     position: relative;
 }
 
 #menu {
     display: none;
-    position: absolute;
+    position: fixed;
+    top: 20px;
+    left: 0;
+    right: 0;
     z-index: 1001;
     width: 100%;
     text-align: center;
@@ -76,10 +102,10 @@ header {
 
 #menu>ul {
     list-style-type: none;
-    margin-top: 50px;
     background-color: var(--cor60);
     width: 100%;
-
+    text-align: center;
+    padding-top: 40px
 }
 
 #menu>ul>li>a {
@@ -94,6 +120,10 @@ header {
     text-decoration: none;
 }
 
+#menu>ul>li>a:hover {
+    background-color: var(--cor30);
+}
+
 #hamburguerIcon,
 #fecharIcon {
     width: 48px;
@@ -101,7 +131,10 @@ header {
     position: fixed;
     cursor: pointer;
     z-index: 1001;
-
+    position: relative;
+    position: fixed;
+    top: 16px;
+    right: 16px;
 }
 
 #fecharIcon {
@@ -131,6 +164,7 @@ header {
 #banner {
     width: 100%;
     margin-bottom: 32px;
+    border-radius: 16px;
 }
 
 /* BEM-VINDO */
@@ -173,13 +207,37 @@ header {
     margin: 8px 8px;
 }
 
+.texto-verde {
+    color: var(--cor10);
+}
+
+/* SOBRE NÓS */
+#img-sobre {
+    width: 100%;
+    margin: 16px 0;
+}
+
+#card-sobre {
+    margin-top: 32px;
+}
+
+#card-sobre img {
+    width: 70px;
+    margin-top: 16px;
+}
+
+/* PROJETOS */
+#card-projetos {
+    width: 371px;
+}
+
 /* RODAPÉ */
 footer {
     background-color: var(--cor10);
     margin-top: 32px;
     padding-top: 16px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 
@@ -216,8 +274,49 @@ footer a>img {
 
 #link-rodape {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: column;
     width: 100%;
+}
+
+#assinatura {
+
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+
+    #hamburguerIcon,
+    #fecharIcon {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+        position: static;
+        height: auto;
+        padding-top: 0;
+        background-color: transparent;
+    }
+
+    #menu>ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #menu>ul>li>a {
+        margin: 0 8px;
+        padding: 8px 12px;
+        border: none;
+        background-color: transparent;
+        color: var(--cor10);
+        font-size: 1rem;
+    }
+
+    #menu>ul>li>a:hover {
+        background-color: transparent;
+        color: var(--cor10);
+        text-decoration: underline;
+    }
 }
