@@ -60,6 +60,8 @@ a {
 
 .titulo {
     text-align: center;
+    margin: 150px 0 32px 0;
+
 }
 
 header {
@@ -72,7 +74,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 16px;
-    position: relative;
     background-color: var(--cor60);
 }
 
@@ -128,7 +129,6 @@ header {
 #fecharIcon {
     width: 48px;
     height: auto;
-    position: fixed;
     cursor: pointer;
     z-index: 1001;
     position: relative;
@@ -228,7 +228,38 @@ header {
 
 /* PROJETOS */
 #card-projetos {
-    width: 371px;
+    width: 100%;
+}
+
+.img-projetos {
+    width: 100%;
+    margin: 16px 0 8px 0;
+}
+
+.participe {
+    margin-top: 32px;
+}
+
+/* COMO AJUDAR */
+.linha {
+    border: 1px solid var(--cor30);
+    width: 100%;
+    margin: 16px 0 16px 0;
+}
+
+.banner-ajudar {
+    width: 100%;
+    border-radius: 16px;
+    margin: 16px 0 16px 0;
+}
+
+#frase {
+    margin-top: 32px;
+}
+
+/* LOCALIZAÇÃO */
+.texto-local {
+    margin-bottom: 16px;
 }
 
 /* RODAPÉ */
