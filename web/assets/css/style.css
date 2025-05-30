@@ -41,7 +41,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1rem;
+    font-size: 1.4rem;
 }
 
 h4 {
@@ -49,13 +49,14 @@ h4 {
 }
 
 p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--corTexto);
     margin: 4px 0 4px 0;
 }
 
 a {
     cursor: pointer;
+    text-decoration: none;
 }
 
 .titulo {
@@ -153,6 +154,7 @@ header {
     border-radius: 16px;
     cursor: pointer;
     text-decoration: none;
+    font-family: var(--texto);
 }
 
 .botao:hover {
@@ -167,7 +169,7 @@ header {
     border-radius: 16px;
 }
 
-/* BEM-VINDO */
+/* INICIO */
 #bem-vindo h1 {
     margin-bottom: 12px;
 }
@@ -200,12 +202,14 @@ header {
 
 .card-explore {
     margin: 16px;
+    cursor: pointer;
 }
 
 .card-explore img {
     width: 100px;
     margin: 8px 8px;
 }
+
 
 .texto-verde {
     color: var(--cor10);
@@ -260,6 +264,48 @@ header {
 /* LOCALIZAÇÃO */
 .texto-local {
     margin-bottom: 16px;
+}
+
+/* FALE CONOSCO */
+.formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+label,
+input,
+textarea {
+    font-family: var(--texto);
+    color: var(--corTexto);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    background-color: var(--cor60);
+    border: #14532D 1px solid;
+    border-radius: 16px;
+}
+
+
+#check {
+    display: flex;
+    flex-direction: row;
+}
+
+#atualizacoes {
+    width: 32px;
+    margin-right: 16px;
+}
+
+div>form>.botao {
+    width: 200px;
+}
+
+.frase {
+    margin: 32px 0 16px 0
 }
 
 /* RODAPÉ */
@@ -349,5 +395,100 @@ footer a>img {
         background-color: transparent;
         color: var(--cor10);
         text-decoration: underline;
+    }
+
+    main {
+        padding: 0 100px;
+    }
+
+    #logo {
+        max-height: 100px;
+    }
+
+    /* INICIO */
+    #inicio {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .texto {
+        width: 50%;
+    }
+
+    /* CARDS EXPLORE NOSSO SITE */
+    #explore {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .card-explore img {
+        width: 250px;
+        margin: 0;
+    }
+
+    /* SOBRE */
+    .img-sobre {
+        width: 100%;
+        margin: 0;
+    }
+
+    .artigo {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 16px 0;
+    }
+
+    .artigo img {
+        margin-right: 16px;
+    }
+
+    #card-sobre img {
+        width: 50px;
+        margin-top: 0;
+        margin-right: 16px;
+    }
+
+    /* PROJETOS */
+
+    #card-projetos img {
+        width: 400px;
+        margin-right: 24px;
+    }
+
+    /* PROJETOS */
+    #local,
+    #fale {
+        display: flex;
+        justify-content:center;
+
+    }
+
+    #local iframe {
+        width: 500px;
+        height: 500px;
+        margin-right: 16px;
+    }
+
+    /* FALE CONOSCO */
+    .formulario {
+        width: 100%;
+        margin-right: 24px;
+    }
+
+    textarea {
+        height: 100px;
+    }
+    #atualizacoes {
+        width: 30px;
     }
 }
